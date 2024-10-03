@@ -1,2 +1,3 @@
-# Testes
-Este meu repositório servira para testes.
+# App
+
+Este repositório é dedicado aos meus primeiros Programas em Python.
