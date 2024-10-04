@@ -33,6 +33,9 @@ rolagem.pack(side = tk.RIGHT, fill = tk.Y)
 canvas.configure(yscrollcommand = rolagem.set)
 canvas_interior = tk.Frame(canvas, bg = "white")
 canvas.create_window((0, 0), window = canvas_interior, anchor = "nw")
-canvas_interior.bind("<configure>", lambda e: canvas.configure(scrollregion = canvas.bbox("all")))
+def ajustar_scrollregion(event):
+    canvas.configure(scrollregion=canvas.bbox("all"))
+
+canvas_interior.bind("<Configure>", ajustar_scrollregion)
 # Aqui em cima você pode adicionar o restante da sua interface gráfica, como widgets, etc.
 janela.mainloop()
